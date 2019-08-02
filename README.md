@@ -1,1 +1,1 @@
-# stats
+# Coursera Week 1 Assignment
