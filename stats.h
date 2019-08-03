@@ -28,7 +28,7 @@ void print_statistics(int min, int max, int mean, int median);
  * @param array and size are integers
  * @return void
  */
-void print_array(int array, int size);
+void print_array(int *array, int size);
 
 /**
  * @breif Returns the median of a sorted array
@@ -39,7 +39,7 @@ void print_array(int array, int size);
  * @param array and size are integers
  * @return med is an integer
  */
-int median(int array, int size);
+int median(int *array, int size);
 
 /**
  * @breif Returns the mean of the array
@@ -50,7 +50,7 @@ int median(int array, int size);
  * @param array and size are integers
  * @return avg is an integer
  */
-int mean(int array, int size);
+int mean(int *array, int size);
 
 /**
  * @breif Returns the largest element of the array
@@ -61,7 +61,7 @@ int mean(int array, int size);
  * @param array and size are integers
  * @return lar is an integer
  */
-int max(int array, int size);
+int max(int *array, int size);
 
 /**
  * @breif Returns the smallest element of the array
@@ -72,7 +72,7 @@ int max(int array, int size);
  * @param array and size are integers
  * @return small is an integer
  */
-int min(int array, int size);
+int min(int *array, int size);
 
 /**
  * @breif Sorts the array elements in ascending order
@@ -83,6 +83,6 @@ int min(int array, int size);
  * @param array and size are integers
  * @return void
  */
-void sort(int array, int size);
+void sort(int *array, int size);
 
 #endif
