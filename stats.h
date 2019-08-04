@@ -18,7 +18,6 @@
  */
 void print_statistics(int min, int max, int mean, int median);
 
-
 /**
  * @breif Prints all the array elements
  * 
