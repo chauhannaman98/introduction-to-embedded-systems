@@ -17,6 +17,16 @@ void print_array(int *array, int size)   {
     }
 }
 
+// To find the median of the given array
+int median(int *array, int size)    {
+    int mid;
+    if(size%2==0)   //size is even
+        mid=size/2;
+    if(size%2!=0)   //size is odd
+        mid=(size+1)/2;
+    return array[mid];
+}
+
 // To find the mean of the elements of the array
 int mean(int *array, int size)   {
     int sum = 0;
@@ -48,6 +58,7 @@ int min(int *array, int size)   {
 }
 
 // To sort the array in ascending order
+// Bubble sort
 void sort(int *array, int size) {
     int i=0, j=0, temp;
     for(i=1;i<size;++i)
