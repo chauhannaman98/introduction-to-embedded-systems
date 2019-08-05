@@ -18,7 +18,8 @@ void print_array(int *array, int size)   {
 }
 
 // To find the median of the given array
-int median(int *array, int size)    {
+int find_median(int *array, int size)    {
+    sort(array, size);
     int mid;
     if(size%2==0)   //size is even
         mid=size/2;
@@ -28,7 +29,7 @@ int median(int *array, int size)    {
 }
 
 // To find the mean of the elements of the array
-int mean(int *array, int size)   {
+int find_mean(int *array, int size)   {
     int sum = 0;
     for(int i=0; i<size; i++)   {
         sum+=array[i];
@@ -38,7 +39,7 @@ int mean(int *array, int size)   {
 }
 
 // To find the largest element of the array
-int max(int *array, int size)   {
+int find_max(int *array, int size)   {
     int largest = array[0];
     for(int i=0; i<size-1; i++)   {
         if(array[i+1]>array[i])
@@ -48,7 +49,7 @@ int max(int *array, int size)   {
 }
 
 // To find the smallest element of the array
-int min(int *array, int size)   {
+int find_min(int *array, int size)   {
     int smallest = array[0];
     for(int i=0; i<size-1; i++) {
         if(array[i+1]<array[i])
