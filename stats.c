@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "stats.h"
 
 // To print all the statistics
