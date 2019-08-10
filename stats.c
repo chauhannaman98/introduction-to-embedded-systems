@@ -14,7 +14,7 @@ void print_array(int *array, int size)   {
     printf("\nArray: ");
     for(int i=0; i<size; i++)   {
         printf("%d", array[i]);
-        printf(",/t");
+        printf(", ");
     }
 }
 
@@ -59,9 +59,9 @@ int find_min(int *array, int size)   {
 // Bubble sort
 void sort(int *array, int size) {
     int i=0, j=0, temp;
-    for(i=1;i<size;++i)
-		for(j=0;j<(size-i);++j)
-			if(array[j]>array[j+1])
+    for(i=0;i<size-1;i++)
+		for(j=i+1;j<(size-1);j++)
+			if(array[i]>array[j])
 			{
 				temp=array[j];
 				array[j]=array[j+1];
@@ -71,12 +71,13 @@ void sort(int *array, int size) {
 
 
 int main()  {
-    int arr[16] = { 2,  5,  8, 23,
-                   17, 21,  7, 60,
-                   23, 30, 12, 51,
-                   19, 39, 47, 36};
+    int arr[40] = { 34, 201, 190, 154,   8, 194,   2,   6,
+                    114, 88,   45,  76, 123,  87,  25,  23,
+                    200, 122, 150, 90,   92,  87, 177, 244,
+                    201,   6,  12,  60,   8,   2,   5,  67,
+                    7,  87, 250, 230,  99,   3, 100,  90};
 
-    int n = 16;
+    int n = 40;
 
     print_array(arr, n);    // printing the array
 
