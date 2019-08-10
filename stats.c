@@ -22,11 +22,15 @@ void print_array(int *array, int size)   {
 int find_median(int *array, int size)    {
     sort(array, size);
     int mid;
-    if(size%2==0)   //size is even
+    if(size%2==0)   {   //size is even
         mid=size/2;
-    if(size%2!=0)   //size is odd
+        int median=(array[mid]+array[mid+1])/2;
+        return median;
+    }
+    else if(size%2!=0)  {   //size is odd
         mid=(size+1)/2;
-    return array[mid];
+        return array[mid];
+    }   
 }
 
 // To find the mean of the elements of the array
