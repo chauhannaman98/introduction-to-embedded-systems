@@ -45,22 +45,14 @@ int find_mean(int *array, int size)   {
 
 // To find the largest element of the array
 int find_max(int *array, int size)   {
-    int largest = array[0];
-    for(int i=0; i<size-1; i++)   {
-        if(array[i+1]>array[i])
-            largest=array[i+1];
-    }
-    return largest;
+    sort(array, size);
+    return array[size-1];
 }
 
 // To find the smallest element of the array
 int find_min(int *array, int size)   {
-    int smallest = array[0];
-    for(int i=0; i<size-1; i++) {
-        if(array[i+1]<array[i])
-            smallest=array[i+1];
-    }
-    return smallest;
+    sort(array, size);
+    return array[0];
 }
 
 // To sort the array in ascending order
