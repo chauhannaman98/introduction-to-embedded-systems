@@ -72,3 +72,25 @@ void sort(int *array, int size) {
 				array[j+1]=temp;
 			}
 }
+
+
+int main()  {
+    int arr[16] = { 2,  5,  8, 23,
+                   17, 21,  7, 60,
+                   23, 30, 12, 51,
+                   19, 39, 47, 36};
+
+    int n = 16;
+
+    print_array(arr, n);    // printing the array
+
+    /*finding all the statistic parameters */
+    int minimum = find_min(arr, n);
+    int maximum = find_max(arr, n);
+    int mean = find_mean(arr, n);
+    int median = find_median(arr, n);
+
+    print_statistics(minimum, maximum, mean, median);   // print the statistics data
+
+    return 0;
+}
