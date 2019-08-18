@@ -31,11 +31,11 @@ PLATFORM =
 ifeq ($(PLATFORM), MSP432)
 	#Architecture Specific Flags
 	LINKER_FILE = msp432p401r.lds
-	CPU = cortex-ms4
+	CPU = cortex-m4
 	ARCH = armv7e-m
 	SPECS = nosys.specs
 	#Compiler Flags and Defines
-	CC = arm-non-eabi-gcc
+	CC = arm-none-eabi-gcc
 	LDFLAGS = -Wl, -Map=c1m2.map $(INCLUDES) -T $(LINKER_FILE)
 	CFLAGS = -Wall -Werror -g -O0 -std=c99 -mcpu=$(CPU)\
 			 -mthumb -march=$(ARCH) -mfloat-abi=hard\
