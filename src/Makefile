@@ -23,8 +23,25 @@
 #------------------------------------------------------------------------------
 include sources.mk
 
+
+
 # Platform Overrides
 PLATFORM = 
+
+	ifeq ($(PLATFORM),HOST)
+		CC = <Add the appropriate compiler>
+		# etc
+	else
+		CC = <Add the appropriate compiler>
+		# etc
+	endif
+
+# General Flags for Both Platforms
+FLAGS = -Wall \
+		-Werror \
+		-g \
+		-O0 \
+		-std=c99
 
 # Architectures Specific Flags
 LINKER_FILE = 
@@ -35,6 +52,7 @@ SPECS =
 # Compiler Flags and Defines
 CC = 
 LD = 
+TARGET = c1m2
 LDFLAGS = 
 CFLAGS = 
 CPPFLAGs = 
